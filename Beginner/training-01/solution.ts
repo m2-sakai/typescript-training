@@ -3,7 +3,7 @@ function greet(name: string, age: number): string {
   return `こんにちは、${name}さん！あなたは${age}歳ですね。`;
 }
 
-// 2. 値が `true` であるかを確認する関数 isTrue を実装してください
+// 2. 値が `true` であるかを確認する関数 isTrue を作成してください
 function isTrue(value: boolean): boolean {
   return value === true;
 }
