@@ -1,10 +1,15 @@
-// 1. ユーザーの名前と年齢のタプル型を作成してください
-const userData: [string, number] = ['Taro', 30];
+// 1. 型エイリアスを定義してください
+type Book = {
+  title: string;
+  author: string;
+  pages: number;
+};
 
-// 2. 引数で受け取ったタプル型を整形して文字列を返す関数を作成してください
-function formatUserData(user: [string, number]): string {
-  return `${user[0]}は${user[1]}歳です。`;
+// 2. Book型を引数として受け取って整形する関数を作成してください
+function describeBook(book: Book): string {
+  return `"${book.title}"は${book.author}によって書かれ、${book.pages}ページあります。`;
 }
 
 // 使用例
-console.log(formatUserData(userData)); // "Taroは30歳です。"
+const myBook = { title: 'TypeScript入門', author: 'John Doe', pages: 300 };
+console.log(describeBook(myBook)); // "TypeScript入門はJohn Doeによって書かれ、300ページあります。"
